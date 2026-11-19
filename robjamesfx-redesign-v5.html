@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rob James FX – Scalp care that keeps shaved heads matte</title>
+<meta name="description" content="Anti-shine scalp care built by an SMP artist for shaved heads: daily matte cream, maximum shine block and tinted mineral sun protection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@80..125,500..900&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E3E9E5;--card:#F6F8F5;--ink:#0F1B18;--pine:#12332B;--mute:#55655F;--line:#C4CFC9;--brass:#C79B4A;--r:28px;--max:1400px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 18px/1.65 Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Archivo,sans-serif;font-stretch:112%;line-height:1;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(3.2rem,7.2vw,7rem)}
+h2{font-size:clamp(2.2rem,4vw,3.6rem)}
+h3{font-size:1.5rem}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 48px}
+section{padding:130px 0}
+.lede{color:var(--mute);margin-top:20px;max-width:46ch}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.btn{display:inline-block;padding:17px 32px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;border:2px solid var(--ink);transition:.2s}
+.btn:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.brass{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn.brass:hover{background:#fff;border-color:#fff}
+/* two-column layout with sticky title */
+.sec{display:grid;grid-template-columns:minmax(280px,.36fr) 1fr;gap:80px}
+.side{position:sticky;top:120px;align-self:start}
+.sec.rev{grid-template-columns:1fr minmax(280px,.36fr)}.sec.rev .side{order:2}
+@media(max-width:960px){.sec,.sec.rev{grid-template-columns:1fr;gap:40px}.side,.sec.rev .side{position:static;order:0}.wrap{padding:0 22px}section{padding:84px 0}}
+
+/* nav */
+header{position:sticky;top:0;z-index:30;background:rgba(227,233,229,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:40px;height:80px}
+header img{height:44px;width:auto}
+header nav{display:flex;gap:34px;margin-left:auto;font-weight:500}
+header nav a{text-decoration:none;color:var(--mute)}header nav a:hover{color:var(--ink)}
+.cart{font-weight:600;text-decoration:none;background:var(--ink);color:#fff;border-radius:999px;padding:10px 22px}
+@media(max-width:800px){header nav{display:none}.cart{margin-left:auto}}
+
+/* hero */
+.hero{padding:40px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+.hero .l{display:flex;flex-direction:column;justify-content:center;padding:30px 0}
+.hero h1 em{font-style:normal;color:var(--pine);background:linear-gradient(transparent 62%,rgba(199,155,74,.5) 62%)}
+.hero p{margin-top:28px;font-size:1.2rem;max-width:44ch;color:var(--mute)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+.photo{position:relative;border-radius:var(--r);overflow:hidden;min-height:640px;background:var(--pine)}
+.photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:80% center}
+.hero .r{display:flex;flex-direction:column;gap:12px}.hero .photo{flex:1;min-height:560px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.chips a{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:18px;padding:10px 14px;text-decoration:none;font-weight:600;font-size:15px;line-height:1.2}
+.chips img{width:46px;height:46px;object-fit:contain;flex:none}
+.chips a:hover{background:#fff}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr}.photo{min-height:480px}.chips{grid-template-columns:1fr}}
+
+/* ticker */
+.tick{background:var(--pine);color:#dfe8e3;padding:20px 0;overflow:hidden;white-space:nowrap}
+.tick div{display:inline-block;animation:slide 38s linear infinite;font:700 1.15rem Archivo;font-stretch:112%}
+.tick span{margin:0 34px}.tick span::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brass);margin-left:68px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* picker */
+.pick{background:var(--card);border-radius:var(--r);padding:44px 56px 44px 44px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;min-height:440px;box-shadow:0 1px 0 #fff inset,0 30px 60px -40px rgba(18,51,43,.35);overflow:hidden;position:relative}
+.pick::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(closest-side,rgba(199,155,74,.22),transparent);pointer-events:none;transition:background .6s}
+.pick[data-l="3"]::before{background:radial-gradient(closest-side,rgba(199,155,74,.45),transparent)}
+.pick .ph{aspect-ratio:1/1;border-radius:24px;padding:28px;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,#fff,#E4EAE6);position:relative;overflow:hidden}
+.pick .ph img{width:100%;max-width:300px;height:auto;object-fit:contain;mix-blend-mode:multiply;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.pick:hover .ph img{transform:scale(1.05) rotate(-1.5deg)}
+.pick h3{font-size:clamp(2rem,3vw,2.6rem);margin:0 0 12px}
+.pick p{color:var(--mute);margin-bottom:28px;max-width:38ch}
+.pick.in .ph img{animation:pIn .6s cubic-bezier(.2,.8,.2,1) both}
+.pick.in h3{animation:tIn .5s .08s cubic-bezier(.2,.8,.2,1) both}
+.pick.in p{animation:tIn .5s .16s cubic-bezier(.2,.8,.2,1) both}
+.pick.in .btn{animation:tIn .5s .24s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pIn{from{opacity:0;transform:translateY(24px) scale(.9) rotate(-4deg)}}
+@keyframes tIn{from{opacity:0;transform:translateX(24px)}}
+.dial{margin-top:32px;padding:0 4px}
+.q{font:700 1.1rem Archivo;margin-bottom:14px}
+.rng{position:relative;height:36px}
+.rng input{-webkit-appearance:none;appearance:none;position:absolute;inset:0;width:100%;height:36px;margin:0;background:transparent;cursor:grab;z-index:2;--p:0%}
+.rng input:active{cursor:grabbing}
+.rng input::-webkit-slider-runnable-track{height:36px;background:transparent}
+.rng input::-moz-range-track{height:36px;background:transparent}
+.rng input::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;margin-top:2px;border-radius:50%;background:var(--pine);border:5px solid var(--card);box-shadow:0 0 0 2px var(--pine),0 6px 14px rgba(18,51,43,.35);transition:transform .2s,box-shadow .2s}
+.rng input::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--pine);border:5px solid var(--card);box-shadow:0 0 0 2px var(--pine),0 6px 14px rgba(18,51,43,.35)}
+.rng input:hover::-webkit-slider-thumb,.rng input:active::-webkit-slider-thumb{transform:scale(1.12);box-shadow:0 0 0 2px var(--pine),0 0 0 9px rgba(18,51,43,.12)}
+.rng input:focus-visible{outline:none}
+.rng input:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(--pine),0 0 0 6px var(--brass)}
+.trk{position:absolute;left:16px;right:16px;top:50%;height:8px;margin-top:-4px;border-radius:99px;background:var(--line)}
+.trk i{position:absolute;left:0;top:0;bottom:0;width:var(--p,0%);border-radius:99px;background:linear-gradient(90deg,var(--pine),var(--brass));transition:width .35s cubic-bezier(.2,.8,.2,1)}
+.trk b{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--card);border:3px solid var(--line);transition:border-color .3s}
+.trk b.on{border-color:var(--pine)}
+.stops{display:flex;justify-content:space-between;margin-top:10px}
+.stops button{background:none;border:0;font:600 15px Figtree;color:var(--mute);cursor:pointer;padding:6px 0;max-width:30%;text-align:center;transition:color .25s}
+.stops button:first-child{text-align:left}.stops button:last-child{text-align:right}
+.stops button:hover,.stops button.on{color:var(--ink)}
+@media(max-width:700px){.pick{grid-template-columns:1fr;padding:24px;gap:28px}.stops button{font-size:13px}}
+
+/* motion */
+.js [data-r]{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js [data-r].vis{opacity:1;transform:none}
+.js .photo[data-r],.js .fo[data-r],.js .ban[data-r],.js .cta[data-r]{transform:translateY(40px) scale(.97)}
+.js .photo[data-r].vis,.js .fo[data-r].vis,.js .ban[data-r].vis,.js .cta[data-r].vis{transform:none}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(.1s + var(--i)*.12s)}
+@keyframes up{to{transform:none}}
+.hero h1 em{background-size:0% 100%;background-repeat:no-repeat;background-image:linear-gradient(transparent 62%,rgba(199,155,74,.5) 62%);background-color:transparent;animation:mark .9s .8s ease forwards}
+@keyframes mark{to{background-size:100% 100%}}
+.hero .l p,.hero .cta-row{opacity:0;animation:fade .8s forwards}
+.hero .l p{animation-delay:.55s}.hero .cta-row{animation-delay:.7s}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero .photo{animation:wipe 1.2s .15s cubic-bezier(.2,.8,.2,1) both}
+.hero .photo>img{animation:zoomOut 1.8s .15s cubic-bezier(.2,.8,.2,1) both}
+@keyframes wipe{from{clip-path:inset(0 0 100% 0 round 28px)}to{clip-path:inset(0 0 0 0 round 28px)}}
+@keyframes zoomOut{from{transform:scale(1.18)}}
+header{transition:box-shadow .3s,background .3s}
+header .wrap{transition:height .3s}header img{transition:height .3s}
+header.sc{box-shadow:0 10px 30px -20px rgba(15,27,24,.5)}header.sc .wrap{height:64px}header.sc img{height:36px}
+header nav a{position:relative}
+header nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+header nav a:hover::after{transform:scaleX(1)}
+.btn{transition:transform .25s,background .2s,color .2s,border-color .2s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px -12px rgba(15,27,24,.5)}
+.btn:active{transform:translateY(0)}
+.cart{transition:transform .2s,background .2s}.cart:hover{transform:scale(1.06);background:var(--pine)}
+.stop,.nums div,.rv,.vs>div,.t{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,opacity .8s,background .3s}
+.stop:hover{transform:translateX(8px);background:rgba(255,255,255,.1)}
+.nums div:hover,.rv:hover,.t:hover{transform:translateY(-8px);box-shadow:0 26px 40px -26px rgba(15,27,24,.55)}
+.js .nums div.vis:hover,.js .rv.vis:hover,.js .t.vis:hover{transform:translateY(-8px)}
+.js .stop.vis:hover{transform:translateX(8px)}
+.t.img>img,.rv img,.stop .ph img,.cta .ci img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.t:hover>img,.rv:hover img,.stop:hover .ph img{transform:scale(1.06)}
+.rv{overflow:hidden}
+.tbl tbody tr{transition:background .25s}.tbl tbody tr:hover{background:#fff}
+.acc-q{transition:color .2s,padding .3s}.acc-q:hover{color:var(--pine);padding-left:10px}
+.chips a{transition:transform .25s,background .2s}.chips a:hover{transform:translateY(-4px)}
+.tick:hover div{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.js [data-r]{opacity:1;transform:none;transition:none}.hero h1 .ln>span,.hero .l p,.hero .cta-row,.hero .photo,.hero .photo>img,.pick.in *{animation:none!important;transform:none;opacity:1}.hero h1 em{animation:none;background-size:100% 100%}.btn:hover,.stop:hover,.nums div:hover,.rv:hover,.t:hover{transform:none}}
+
+/* routine */
+.day{background:var(--pine);color:#fff}
+.day .lede{color:#a9bdb4}
+.route{display:grid;gap:20px}
+.stop{display:grid;grid-template-columns:200px 1fr;gap:28px;background:rgba(255,255,255,.06);border-radius:var(--r);padding:20px;align-items:center}
+.stop .ph{aspect-ratio:1/1;border-radius:20px;overflow:hidden;background:#0b231d}
+.stop .ph img{width:100%;height:100%;object-fit:cover}
+.stop time{color:var(--brass);font-weight:600;font-size:15px}
+.stop h3{margin:4px 0 6px}
+.stop p{color:#b9cbc3;margin-bottom:14px}
+.stop a{font-weight:600;color:#fff}
+@media(max-width:700px){.stop{grid-template-columns:1fr}}
+
+/* founder */
+.fo{position:relative;border-radius:var(--r);overflow:hidden;min-height:620px;display:flex;align-items:flex-end;color:#fff;background:var(--pine)}
+.fo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.fo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,18,.92),rgba(10,22,18,.1) 70%)}
+.fo .in{position:relative;z-index:1;padding:56px;max-width:880px}
+.fo blockquote{font:800 clamp(1.8rem,3.4vw,3rem)/1.08 Archivo;font-stretch:112%;letter-spacing:-.02em}
+.fo p{margin-top:20px;color:#d3e0da;max-width:56ch}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+.nums div{background:var(--card);border-radius:22px;padding:28px}
+.nums b{font:800 2.8rem Archivo;font-stretch:112%;display:block;line-height:1}
+.nums span{color:var(--mute);font-size:15px}
+@media(max-width:800px){.nums{grid-template-columns:1fr 1fr}.fo .in{padding:28px}}
+
+/* why scalp-first */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vs>div{border-radius:var(--r);padding:40px}
+.vs .a{background:#D3DBD6;color:var(--mute)}
+.vs .b{background:var(--ink);color:#fff}
+.vs h3{margin-bottom:20px}
+.vs ul{list-style:none;padding:0}
+.vs li{padding:14px 0;border-top:1px solid rgba(127,140,134,.4)}
+@media(max-width:700px){.vs{grid-template-columns:1fr}}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.t{border-radius:var(--r);overflow:hidden;position:relative;min-height:300px;background:var(--card)}
+.t.img{color:#fff;display:flex;align-items:flex-end}
+.t.img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.t.img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,18,.85),transparent 65%)}
+.t .in{position:relative;z-index:1;padding:28px}
+.t p{opacity:.85;margin-top:6px}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+.t.txt{padding:32px;display:flex;flex-direction:column;justify-content:space-between;background:var(--brass)}
+.t.txt p{color:#2c2410}
+@media(max-width:900px){.bento{grid-template-columns:1fr}.s2,.s3,.s4{grid-column:auto}}
+
+/* banner split */
+.ban{display:grid;grid-template-columns:.9fr 1.1fr;border-radius:var(--r);overflow:hidden;background:var(--pine);color:#fff}
+.ban .bt{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+.ban p{color:#b9cbc3;margin:20px 0 26px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.pills span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 18px;font-size:15px}
+.ban blockquote{font:800 clamp(1.8rem,3vw,2.8rem)/1.08 Archivo;font-stretch:112%;letter-spacing:-.02em}
+.ban .im{position:relative;min-height:660px}
+.ban .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 0}
+@media(max-width:900px){.ban,.cta{grid-template-columns:1fr}.ban .bt,.cta .ct{padding:44px 24px}.ban .im{min-height:480px;order:-1}.cta .ci{min-height:320px}}
+
+/* reviews */
+.rvh{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.rv{background:var(--card);border-radius:var(--r);overflow:hidden}
+.rv img{width:100%;height:auto;background:#D6DFDA}
+.rv .tx{padding:30px}
+.rv blockquote{font:700 1.4rem/1.3 Archivo;font-stretch:108%;letter-spacing:-.01em}
+.rv cite{display:block;margin-top:18px;font-style:normal;color:var(--mute);font-size:15px}
+.rv cite b{color:var(--ink)}
+@media(max-width:900px){.wall{grid-template-columns:1fr}}
+
+/* compare */
+.tw{overflow-x:auto}
+.tbl{width:100%;min-width:720px;border-collapse:collapse;background:var(--card);border-radius:var(--r);overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:24px 30px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl thead th{font:800 1.3rem Archivo;font-stretch:108%;background:var(--pine);color:#fff;border:0}
+.tbl tbody th{font:600 15px Figtree;color:var(--mute)}
+.tbl tr:last-child>*{border-bottom:0}
+
+/* faq accordion */
+.acc-item{border-top:1px solid var(--line)}
+.acc-item:last-child{border-bottom:1px solid var(--line)}
+.acc-q{width:100%;background:none;border:0;color:inherit;text-align:left;font:800 1.4rem Archivo;font-stretch:108%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;cursor:pointer}
+.acc-q::after{content:"+";color:var(--pine);font-size:2rem;line-height:1;transition:transform .35s ease}
+.acc-item.open .acc-q::after{transform:rotate(45deg)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.acc-item.open .acc-a{grid-template-rows:1fr}
+.acc-a>div{overflow:hidden}
+.acc-a p{color:var(--mute);padding-bottom:28px;max-width:62ch}
+
+/* cta split */
+.cta{display:grid;grid-template-columns:1fr 1.1fr;border-radius:var(--r);overflow:hidden;background:var(--pine);color:#fff}
+.cta .ct{padding:80px 56px;display:flex;flex-direction:column;justify-content:center}
+.cta p{color:#b9cbc3;margin:18px 0 0;max-width:40ch;font-size:1.1rem}
+.cta .btn.ghost{color:#fff}.cta .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.cta .ci{position:relative;min-height:500px}
+.cta .ci img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* footer */
+footer{background:#0B1512;color:#a9b8b1;font-size:16px;padding:0}
+.ft-top{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;padding:64px 0;border-bottom:1px solid #1f2d28}
+.ft-top h3{color:#fff;font-size:2rem}
+.ft-top p{margin-top:8px}
+.sub{display:flex;gap:8px;width:min(460px,100%)}
+.sub input{flex:1;min-width:0;padding:15px 22px;border-radius:999px;border:1px solid #2a3a34;background:#121f1a;color:#fff;font:inherit}
+.sub button{font:600 16px Figtree;border:0;border-radius:999px;background:var(--brass);color:var(--ink);padding:0 28px;cursor:pointer}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding:64px 0}
+.ft-grid .brand img{height:46px;width:auto;filter:brightness(0) invert(1);margin-bottom:20px}
+.ft-grid .brand p{max-width:34ch}
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.soc a{border:1px solid #2a3a34;border-radius:999px;padding:8px 16px;font-size:14px;text-decoration:none;color:#dbe5e0}
+.soc a:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+footer h4{font:700 15px Figtree;color:#fff;margin-bottom:18px}
+footer ul{list-style:none;padding:0}
+footer li{margin-bottom:12px}
+footer li a{text-decoration:none}
+footer li a:hover{color:var(--brass)}
+.ft-badges{display:flex;flex-wrap:wrap;gap:12px 36px;padding:28px 0;border-top:1px solid #1f2d28;font-size:15px}
+.ft-badges span::before{content:"✓ ";color:var(--brass);font-weight:700}
+.ft-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:24px 0 36px;border-top:1px solid #1f2d28;font-size:14px;color:#7f8f88}
+.ft-bot a{margin-left:24px;text-decoration:none}.ft-bot a:hover{color:#fff}
+@media(max-width:900px){.ft-grid{grid-template-columns:1fr 1fr}.ft-grid .brand{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){.tick div{animation:none}.acc-a,.acc-q::after{transition:none}*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="https://robjamesfx.com/"><img src="https://robjamesfx.com/cdn/shop/files/RobJamesFX_Logo.png?width=400" alt="Rob James FX"></a>
+    <nav aria-label="Main">
+      <a href="https://robjamesfx.com/collections/all">Shop</a>
+      <a href="https://robjamesfx.com/pages/anti-shine-fx">Anti-Shine FX</a>
+      <a href="https://robjamesfx.com/pages/about-us">About</a>
+      <a href="https://robjamesfx.com/pages/contact">Contact</a>
+    </nav>
+    <a class="cart" href="https://robjamesfx.com/cart">Cart 0</a>
+  </div>
+</header>
+
+<main>
+<!-- 1 HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="l">
+      <h1><span class="ln"><span style="--i:0">Bald, shaved or SMP.</span></span> <span class="ln"><span style="--i:1"><em>Never shiny.</em></span></span></h1>
+      <p>Scalp care made by an SMP artist for exposed heads. Pick the strength that fits your day and stay matte from morning to night.</p>
+      <div class="cta-row">
+        <a class="btn" href="#picker">Find my strength</a>
+        <a class="btn ghost" href="https://robjamesfx.com/collections/all">Shop all</a>
+      </div>
+    </div>
+    <div class="r">
+      <div class="photo"><img src="./images/hero-image.png" alt="Anti-shine scalp care for shaved heads and SMP"></div>
+      <!-- <div class="chips">
+        <a href="https://robjamesfx.com/products/rob-james-fx-matte-look"><img src="https://robjamesfx.com/cdn/shop/files/matte_look1.png?width=200" alt="">Matte Look</a>
+        <a href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream"><img src="https://robjamesfx.com/cdn/shop/files/shine_block.png?width=200" alt="">Shine Block</a>
+        <a href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2"><img src="https://robjamesfx.com/cdn/shop/files/SUN_SCALP_SHINE.png?width=200" alt="">Matte Shield</a>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- 2 TICKER -->
+<div class="tick" aria-hidden="true"><div>
+  <span>Designed for shaved heads &amp; SMP</span><span>Fragrance free</span><span>Made in Canada</span><span>Free shipping over $85</span><span>10+ years of scalp experience</span><span>Designed for shaved heads &amp; SMP</span><span>Fragrance free</span><span>Made in Canada</span><span>Free shipping over $85</span><span>10+ years of scalp experience</span>
+</div></div>
+
+<!-- 3 PICKER -->
+<section id="picker">
+  <div class="wrap sec">
+    <div class="side"><h2>How shiny does your scalp get?</h2><p class="lede">Slide to match your situation and we’ll point you to the right product.</p></div>
+    <div>
+      <div class="pick" id="pick" aria-live="polite"></div>
+      <div class="dial">
+        <p class="q">Drag to choose</p>
+        <div class="rng"><div class="trk" aria-hidden="true"><i></i><b class="on" style="left:0"></b><b style="left:50%"></b><b style="left:100%"></b></div>
+          <input type="range" id="lvl" min="1" max="3" step="1" value="1" aria-label="Shine level"></div>
+        <div class="stops"><button type="button" data-v="1">Some shine, most days</button><button type="button" data-v="2">A lot, for big moments</button><button type="button" data-v="3">Shine plus sun</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 YOUR DAY -->
+<section class="day">
+  <div class="wrap sec">
+    <div class="side"><h2>Different days. Different needs.</h2><p class="lede">Here is when each product earns its place.</p></div>
+    <div class="route">
+      <div class="stop"><div class="ph"><img src="https://robjamesfx.com/cdn/shop/files/hydrate.png?width=600" alt="" loading="lazy"></div><div><time>Everyday</time><h3>Matte Look</h3><p>Lightweight anti-shine and hydration for a normal day.</p><a href="https://robjamesfx.com/products/rob-james-fx-matte-look">Shop Matte Look</a></div></div>
+      <div class="stop"><div class="ph"><img src="https://robjamesfx.com/cdn/shop/files/control.png?width=600" alt="" loading="lazy"></div><div><time>Big moments</time><h3>Shine Block</h3><p>Serious, longer-lasting control for events and photography.</p><a href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream">Shop Shine Block</a></div></div>
+      <div class="stop"><div class="ph"><img src="https://robjamesfx.com/cdn/shop/files/PROTECT.webp?width=600" alt="" loading="lazy"></div><div><time>Outdoors</time><h3>Matte Shield</h3><p>Mineral sun protection that finishes matte.</p><a href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2">Shop Matte Shield</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 FOUNDER -->
+<section>
+  <div class="wrap">
+    <div class="ban">
+      <div class="bt">
+        <blockquote>Most skincare simply wasn’t designed for the scalp. So we made some that is.</blockquote>
+        <p>Rob James FX was born from more than a decade of hands-on work with shaved heads and scalp micropigmentation.</p>
+        <div><a class="btn brass" href="https://robjamesfx.com/pages/about-us">Read our story</a></div>
+      </div>
+      <div class="im"><img src="https://robjamesfx.com/cdn/shop/files/img--1.png?width=1600" alt="Rob James" style="object-position:50% 0" loading="lazy"></div>
+    </div>
+    <div class="nums">
+      <div><b>10+</b><span>Years experience</span></div>
+      <div><b>3,000+</b><span>Scalp procedures</span></div>
+      <div><b>3</b><span>Years of development</span></div>
+      <div><b>1</b><span>Focus: shaved heads &amp; SMP</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 WHY SCALP-FIRST -->
+<section style="padding-top:0">
+  <div class="wrap sec">
+    <div class="side"><h2>Why a scalp needs its own care.</h2><p class="lede">An exposed scalp is not the same job as a face cream.</p></div>
+    <div class="vs">
+      <div class="a"><h3>General skincare</h3><ul><li>Not designed around the scalp</li><li>Often scented</li><li>Not made to control shine</li></ul></div>
+      <div class="b"><h3>Rob James FX</h3><ul><li>Developed for shaved heads and SMP</li><li>Fragrance free</li><li>Anti-shine, hydration and sun protection</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 BENTO -->
+<section style="padding-top:0">
+  <div class="wrap sec rev">
+    <div class="side"><h2>What goes on your head.</h2><p class="lede">Premium ingredients and purposeful care that hydrate, balance and comfort shaved scalps.</p></div>
+    <div class="bento">
+      <div class="t img s4"><img src="https://robjamesfx.com/cdn/shop/files/scalp.png?width=1200" alt="" loading="lazy"><div class="in"><h3>Thoughtful ingredients</h3><p>Carefully selected for scalp and skin.</p></div></div>
+      <div class="t txt s2"><h3>Fragrance free</h3><p>No unnecessary scent. Just clean, comfortable care.</p></div>
+      <div class="t txt s2"><h3>Non-greasy</h3><p>Lightweight textures for everyday use.</p></div>
+      <div class="t img s4"><img src="https://robjamesfx.com/cdn/shop/files/scalp-2.png?width=1200" alt="" loading="lazy"><div class="in"><h3>Premium texture</h3><p>Stay naturally matte from morning to night.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 SHOULDN'T SHINE -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="ban">
+      <div class="bt">
+        <h2>A shaved head shouldn’t have to shine.</h2>
+        <p>Whether you want everyday hydration or serious anti-shine performance, Rob James FX is made for exposed scalps.</p>
+        <div class="pills"><span>Hydrate daily</span><span>Control shine</span><span>Protect exposed skin</span></div>
+        <div><a class="btn brass" href="https://robjamesfx.com/collections/all">Shop scalp care</a></div>
+      </div>
+      <div class="im"><img src="https://robjamesfx.com/cdn/shop/files/img--2.png?width=1600" alt="Man with a shaved head walking outdoors" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 REVIEWS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="rvh"><div><h2>Heard from real heads.</h2><p class="lede">Verified buyers and the product they use.</p></div></div>
+    <div class="wall">
+      <figure class="rv"><img src="https://robjamesfx.com/cdn/shop/files/jerdy.png?width=900" alt="Jordy M." loading="lazy"><div class="tx"><blockquote>“Matte Look has been a game changer. No more checking my scalp in every mirror.”</blockquote><cite><b>Jordy M.</b> · Verified buyer · Matte Look</cite></div></figure>
+      <figure class="rv"><img src="https://robjamesfx.com/cdn/shop/files/tony.png?width=900" alt="Tony K." loading="lazy"><div class="tx"><blockquote>“Shine Block keeps my scalp completely matte all day, even in the heat.”</blockquote><cite><b>Tony K.</b> · Verified buyer · Shine Block</cite></div></figure>
+      <figure class="rv"><img src="https://robjamesfx.com/cdn/shop/files/rav.png?width=900" alt="Rav B." loading="lazy"><div class="tx"><blockquote>“Matte Shield is lightweight, protects great, and doesn’t leave a white cast.”</blockquote><cite><b>Rav B.</b> · Verified buyer · Matte Shield</cite></div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11 COMPARE -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="rvh"><div><h2>Compare the three.</h2><p class="lede">They aren’t three versions of the same product. Each one is built for a different job.</p></div></div>
+    <div class="tw"><table class="tbl">
+      <thead><tr><th></th><th>Matte Look</th><th>Shine Block</th><th>Matte Shield</th></tr></thead>
+      <tbody>
+        <tr><th>Level</th><td>Everyday</td><td>Maximum</td><td>Protect</td></tr>
+        <tr><th>Best for</th><td>Lightweight daily anti-shine with hydration</td><td>Very shiny or oily scalps, events and photography</td><td>Sun protection with a natural matte finish</td></tr>
+        <tr><th>Sun protection</th><td>—</td><td>—</td><td>Tinted mineral SPF 40</td></tr>
+        <tr><th>Use on</th><td>Scalp and face</td><td>Scalp</td><td>Scalp and face</td></tr>
+        <tr><th></th><td><a class="btn ghost" href="https://robjamesfx.com/products/rob-james-fx-matte-look">Shop</a></td><td><a class="btn ghost" href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream">Shop</a></td><td><a class="btn ghost" href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2">Shop</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 12 FAQ -->
+<section style="padding-top:0">
+  <div class="wrap sec">
+    <div class="side"><h2>Quick answers.</h2><p class="lede">About products, ingredients and scalp care.</p><p style="margin-top:28px"><a class="btn ghost" href="https://robjamesfx.com/pages/faq">View all FAQs</a></p></div>
+    <div id="acc">
+        <div class="acc-item open"><button class="acc-q" aria-expanded="true" aria-controls="a0">Which product is right for me?</button><div class="acc-a" id="a0"><div><p>Choose by the level of control you need. Matte Look for everyday shine and hydration, Shine Block for maximum control, Matte Shield for tinted mineral SPF 40 with a matte finish.</p></div></div></div>
+        <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="a1">Does Matte Shield leave a white cast?</button><div class="acc-a" id="a1"><div><p>Like any mineral sunscreen it may show some cast at first. The subtle tint helps it blend, and the cast fades as you massage it in. Results vary with skin tone and amount applied.</p></div></div></div>
+        <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="a2">Is it designed for bald and shaved heads?</button><div class="acc-a" id="a2"><div><p>Yes. The range was developed around exposed scalp skin, especially bald heads, shaved heads and SMP.</p></div></div></div>
+        <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="a3">Are the three products the same?</button><div class="acc-a" id="a3"><div><p>No. Each was purpose-built for a specific scalp need: everyday, maximum or sun protection.</p></div></div></div>
+        <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="a4">Can I use Matte Look on my face?</button><div class="acc-a" id="a4"><div><p>Yes. Matte Look is made for scalp and face.</p></div></div></div>
+        <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="a5">Are the products fragrance free?</button><div class="acc-a" id="a5"><div><p>Yes. Rob James FX uses no unnecessary scent.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div class="ct">
+        <h2>Ready to lose the shine?</h2>
+        <p>Purpose-built anti-shine scalp care for shaved heads and SMP.</p>
+        <div class="cta-row"><a class="btn brass" href="https://robjamesfx.com/pages/anti-shine-fx">Shop anti-shine</a><a class="btn ghost" href="https://robjamesfx.com/collections/all">Shop all</a></div>
+      </div>
+      <div class="ci"><img src="https://robjamesfx.com/cdn/shop/files/product_img_e.webp?width=1800" alt="Matte Look, Shine Block and Matte Shield packaging" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div><h3>Join the movement</h3><p>Exclusive tips, updates and offers.</p></div>
+      <form class="sub" onsubmit="return false"><input type="email" placeholder="Your email" aria-label="Email address"><button>Join</button></form>
+    </div>
+    <div class="ft-grid">
+      <div class="brand">
+        <img src="https://robjamesfx.com/cdn/shop/files/RobJamesFX_Logo.png?width=400" alt="Rob James FX">
+        <p>Premium scalp care for shaved heads and SMP. Built for daily care. Designed for confidence.</p>
+        <div class="soc">
+          <a href="https://www.facebook.com/robjamesfx">Facebook</a><a href="https://www.tiktok.com/@robjamesfx">TikTok</a><a href="https://www.instagram.com/robjamesfx/">Instagram</a><a href="https://www.youtube.com/@RobJamesFX">YouTube</a>
+        </div>
+      </div>
+      <div><h4>Shop</h4><ul>
+        <li><a href="https://robjamesfx.com/products/rob-james-fx-matte-look">Matte Look</a></li>
+        <li><a href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream">Shine Block</a></li>
+        <li><a href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2">Matte Shield</a></li>
+        <li><a href="https://robjamesfx.com/collections/all">Shop All</a></li></ul></div>
+      <div><h4>About</h4><ul>
+        <li><a href="https://robjamesfx.com/pages/about-us">Our Story</a></li>
+        <li><a href="https://robjamesfx.com/pages/anti-shine-fx">Anti-Shine FX</a></li>
+        <li><a href="https://robjamesfx.com/pages/contact">Contact Us</a></li></ul></div>
+      <div><h4>Support</h4><ul>
+        <li><a href="https://robjamesfx.com/pages/privacy-policy">Privacy policy</a></li>
+        <li><a href="https://robjamesfx.com/pages/refund-policy">Refund Policy</a></li>
+        <li><a href="https://robjamesfx.com/pages/terms-of-service">Terms of service</a></li>
+        <li><a href="https://robjamesfx.com/pages/missing-delivery-policy">Missing Delivery Policy</a></li></ul></div>
+    </div>
+    <div class="ft-badges"><span>Free shipping on orders over $85</span><span>Made in Canada</span><span>Fragrance free</span></div>
+    <div class="ft-bot"><span>© 2026 Rob James FX. All Rights Reserved.</span><span><a href="https://robjamesfx.com/pages/privacy-policy">Privacy Policy</a><a href="https://robjamesfx.com/pages/terms-of-service">Terms of Service</a></span></div>
+  </div>
+</footer>
+
+<script>
+// Replace these three image paths with your own image filenames.
+const P={
+ 1:{n:'Matte Look',t:'Lightweight daily anti-shine with hydration. Works on scalp and face.',i:'images/product-1.png',u:'rob-james-fx-matte-look'},
+ 2:{n:'Shine Block',t:'Maximum, long-lasting control for very shiny scalps, events and photography.',i:'images/product-2.png',u:'rob-james-fx-shine-block-anti-shine-scalp-cream'},
+ 3:{n:'Matte Shield',t:'Tinted mineral SPF 40 for scalp and face with a natural matte finish.',i:'images/product-3.png',u:'rob-james-fx-matte-shield%E2%84%A2'}};
+const box=document.getElementById('pick'),r=document.getElementById('lvl'),trk=document.querySelector('.trk'),dots=trk.querySelectorAll('b'),btns=document.querySelectorAll('.stops button');
+Object.values(P).forEach(p=>{new Image().src=p.i});
+function draw(){const p=P[r.value],v=+r.value;
+ box.dataset.l=v;box.classList.remove('in');void box.offsetWidth;
+ box.innerHTML=`<div class="ph"><img src="${p.i}" alt="${p.n}"></div>
+ <div><h3>${p.n}</h3><p>${p.t}</p><a class="btn" href="https://robjamesfx.com/products/${p.u}">Shop ${p.n}</a></div>`;
+ box.classList.add('in');
+ r.style.setProperty('--p',(v-1)*50+'%');trk.style.setProperty('--p',(v-1)*50+'%');
+ dots.forEach((d,i)=>d.classList.toggle('on',i<v));
+ btns.forEach((b,i)=>b.classList.toggle('on',i+1===v));}
+r.addEventListener('input',draw);draw();
+btns.forEach(b=>b.addEventListener('click',()=>{r.value=b.dataset.v;draw()}));
+
+/* page motion */
+(function(){
+ const d=document.documentElement,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const hd=document.querySelector('header');
+ const onS=()=>hd.classList.toggle('sc',scrollY>20);addEventListener('scroll',onS,{passive:true});onS();
+ if(rm||!('IntersectionObserver' in window))return;
+ d.classList.add('js');
+ const groups=['.side>*','.dial','.pick','.stop','.fo','.nums div','.vs>div','.t','.ban','.rv','.rvh','.tw','.acc-item','.cta','.ft-top','.ft-grid>*'];
+ groups.forEach(g=>{const seen=new Map();document.querySelectorAll('main '+g+(g.startsWith('.ft')?'':''+'')+','+(g.startsWith('.ft')?'footer '+g:'x-none')).forEach(el=>{
+  if(el.closest('.hero'))return;const k=el.parentElement,i=seen.get(k)||0;seen.set(k,i+1);
+  el.dataset.r='';el.style.setProperty('--d',Math.min(i*.09,.5)+'s');});});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);
+  if(e.target.matches('.nums div'))count(e.target.querySelector('b'))}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+ document.querySelectorAll('[data-r]').forEach(el=>io.observe(el));
+ function count(b){if(!b||b.dataset.done)return;b.dataset.done=1;const m=b.textContent.trim().match(/^(\D*)([\d.,]+)(.*)$/);if(!m)return;
+  const end=parseFloat(m[2].replace(/,/g,'')),dec=(m[2].split('.')[1]||'').length,t0=performance.now();
+  (function f(t){const k=Math.min((t-t0)/1400,1),e=1-Math.pow(1-k,4);b.textContent=m[1]+(end*e).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})+m[3];if(k<1)requestAnimationFrame(f)})(t0)}
+})();
+document.querySelectorAll('#acc .acc-q').forEach(b=>b.addEventListener('click',()=>{
+ const it=b.parentElement,was=it.classList.contains('open');
+ document.querySelectorAll('#acc .acc-item').forEach(x=>{x.classList.remove('open');x.querySelector('.acc-q').setAttribute('aria-expanded','false')});
+ if(!was){it.classList.add('open');b.setAttribute('aria-expanded','true')}
+}));
+</script>
+</body>
+</html>
