@@ -71,20 +71,22 @@ section{position:relative}
 .pc .btn{padding:11px 18px;font-size:16px}
 .feat-foot{margin-top:30px;text-align:right}
 /* chain of the month */
-.cotm{background:var(--char);color:var(--cream);overflow:hidden;padding:70px 0}
-.cotm .big{position:absolute;left:-1vw;top:50%;transform:translateY(-52%);font-size:clamp(110px,20vw,300px);color:transparent;-webkit-text-stroke:2px #ffffff22;white-space:nowrap;pointer-events:none}
-.cotm .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.cotm{position:relative;background:var(--char);color:var(--cream);overflow:hidden;padding:70px 0}
+.cotm .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
 .cotm .eyebrow{color:var(--gold)}
 .cotm h2{font-size:clamp(36px,4.6vw,62px);margin:16px 0 18px}
 .cotm h2 em{color:var(--gold);font-style:inherit}
 .cotm p{max-width:460px;opacity:.85}
 .cotm .acts{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:30px}
-.stage{position:relative;aspect-ratio:1/1.05}
+.stage{position:relative;z-index:0;aspect-ratio:1/1.05}
 .stage:before{content:"";position:absolute;inset:6% 4%;background:var(--gold);transform:rotate(-4deg)}
 .stage svg{position:absolute;inset:0;margin:auto;width:78%;height:auto;filter:drop-shadow(0 30px 30px #0008)}
 .stage .stamp{position:absolute;right:-2%;bottom:6%;width:110px;height:110px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;text-align:center;font-family:var(--d);font-weight:800;text-transform:uppercase;line-height:1;font-size:17px;border:3px solid var(--gold)}
 .cotm .pillars{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px;border-top:1px solid #ffffff2a;padding-top:26px;font-size:14px}
 .cotm .pillars b{display:block;font-family:var(--d);font-size:20px;text-transform:uppercase;color:var(--gold);letter-spacing:.04em}
+.cotm .pillars .pi{display:grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--gold);color:var(--gold);margin-bottom:14px;transition:background .2s,color .2s}
+.cotm .pillars .pi svg{width:22px;height:22px}
+.cotm .pillars>div:hover .pi{background:var(--gold);color:var(--ink)}
 /* craft */
 .craft{padding:70px 0}
 .craft-top{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px}
@@ -138,13 +140,38 @@ section{position:relative}
 .cmp h2{font-size:clamp(34px,4.4vw,58px)}
 .cmp h2 em{font-style:inherit;color:var(--gold)}
 .cmp p{opacity:.8;max-width:330px}
-.tbl{width:100%;border-collapse:collapse}
-.tbl th{font-family:var(--d);text-transform:uppercase;letter-spacing:.08em;font-size:17px;text-align:left;padding:0 12px 14px}
-.tbl th:nth-child(2){color:var(--gold)}
-.tbl td{padding:16px 12px;border-top:1px solid #ffffff25;font-size:15px;vertical-align:top}
-.tbl td b{display:block;font-family:var(--d);font-size:21px;text-transform:uppercase;letter-spacing:.02em}
-.tbl td:nth-child(2){background:#E0AE2C1c;color:#fff}.tbl td:nth-child(2) i{color:var(--gold);font-style:normal;font-weight:600}
-.tbl td:nth-child(3){opacity:.55}
+.cmp-l{position:sticky;top:30px}
+.cmp-l .btn{margin-top:26px}
+.cmp-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ffffff22;margin-top:34px;max-width:330px;border:1px solid #ffffff22}
+.cmp-stats div{background:var(--char);padding:16px 14px}
+.cmp-stats b{display:block;font-family:var(--d);font-size:34px;line-height:1;color:var(--gold);font-weight:800}
+.cmp-stats span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.65}
+.tbl{width:100%;border-collapse:separate;border-spacing:0}
+.tbl th{font-family:var(--d);text-transform:uppercase;letter-spacing:.08em;font-size:16px;text-align:left;padding:0 16px 16px;vertical-align:bottom;opacity:.7}
+.tbl th.us{opacity:1;color:var(--ink);background:var(--gold);padding:14px 16px;border-radius:6px 6px 0 0;position:relative}
+.tbl th.us small{display:block;font-size:11px;letter-spacing:.18em;opacity:.7;margin-bottom:2px}
+.tbl td{padding:18px 16px;border-top:1px solid #ffffff1f;font-size:15px;vertical-align:middle;transition:background .2s}
+.tbl td b{display:block;font-family:var(--d);font-size:21px;text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.tbl td small{display:block;opacity:.65;font-size:14px;margin-top:2px}
+.tbl .f{display:flex;gap:14px;align-items:center}
+.tbl .fi{flex:none;width:40px;height:40px;display:grid;place-items:center;border:1.5px solid #ffffff33;color:var(--gold)}
+.tbl .fi svg{width:20px;height:20px}
+.tbl td.us{background:linear-gradient(180deg,#E0AE2C26,#E0AE2C14);color:#fff;border-left:2px solid var(--gold);border-right:2px solid var(--gold)}
+.tbl tr:last-child td.us{border-bottom:2px solid var(--gold);border-radius:0 0 6px 6px}
+.tbl td.them{color:#ffffffa0}
+.tbl tr:hover td:not(.us){background:#ffffff08}
+.tbl tr:hover td.us{background:#E0AE2C33}
+.v{display:flex;gap:12px;align-items:flex-start}
+.v .ic{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;margin-top:1px}
+.v .ic svg{width:14px;height:14px}
+.v.y .ic{background:var(--gold);color:var(--ink)}
+.v.n .ic{background:#ffffff18;color:#ff8a7a}
+.v.m .ic{background:#ffffff18;color:#f0c36a}
+.v em{display:block;font-style:normal;font-family:var(--d);font-weight:800;letter-spacing:.1em;font-size:15px;line-height:1.2}
+.v.y em{color:var(--gold)}
+.v span{display:block;font-size:14px;line-height:1.35}
+.tbl-wrap{overflow-x:auto}
+@media(max-width:980px){.cmp-l{position:static}.tbl{min-width:640px}}
 /* reviews */
 .rev{padding:70px 0;background:var(--cream2)}
 .rev-g{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
@@ -325,14 +352,13 @@ header.site-header{grid-template-columns:auto 1fr auto}
 <div class="wrap feat-foot"><a class="ul" href="#">View all chains →</a></div></section>
 
 <section class="cotm">
-<div class="h big" aria-hidden="true">Kratos</div>
 <div class="wrap">
 <div><div class="eyebrow">Exclusive feature · Chain of the month</div>
 <h2 class="h">Kratos Gold <em>Spinner</em> Chain</h2>
 <p>Designed for champions who lead the game. It represents dedication, skill and victory — crafted with precision and finished with premium details. More than jewelry: a statement of legacy.</p>
 <div class="acts"><a class="btn gold" href="#">View full details →</a><a class="ul" href="#">Explore more</a></div></div>
 <div class="stage" style="--c1:#E7B93A;--c2:#7a5a10"><svg viewBox="0 0 200 270"><use href="#ch"/></svg><img class="kimg" src="https://championshipchains.com/cdn/shop/files/Kratos_Spinner.webp?v=1783583630&amp;width=900" alt="Kratos Gold Spinner Championship Chain" onload="this.parentNode.querySelector('svg').style.display='none'" onerror="this.remove()"><div class="stamp">Limited<br>monthly<br>feature</div></div>
-<div class="pillars"><div><b>Premium craftsmanship</b>Every detail designed with precision and care.</div><div><b>Champion quality</b>Built with the highest standards.</div><div><b>Limited feature</b>Exclusive designs. Limited quantities each month.</div><div><b>Fast turnaround</b>Your chain, faster than ever.</div></div>
+<div class="pillars"><div><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l-2 6 5 12M15 3l2 6-5 12"/></svg></span><b>Premium craftsmanship</b>Every detail designed with precision and care.</div><div><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><b>Champion quality</b>Built with the highest standards.</div><div><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.9z"/></svg></span><b>Limited feature</b>Exclusive designs. Limited quantities each month.</div><div><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><b>Fast turnaround</b>Your chain, faster than ever.</div></div>
 </div></section>
 
 <section class="craft" id="craft"><div class="wrap">
@@ -370,13 +396,14 @@ header.site-header{grid-template-columns:auto 1fr auto}
 </div></section>
 
 <section class="cmp"><div class="wrap"><div class="cmp-in">
-<div><div class="eyebrow" style="color:var(--gold)">Why we stand out</div><h2 class="h" style="margin-top:16px">Built different. <em>Built to win.</em></h2><p>Every detail matters — quality, speed and value, where others can’t compete.</p></div>
-<table class="tbl"><thead><tr><th>Feature</th><th>Championship Chains</th><th>Others</th></tr></thead><tbody>
-<tr><td><b>Fully custom designs</b>Built around your vision.</td><td><i>YES</i><br>Dedicated design support.</td><td>NO<br>Limited support and options.</td></tr>
-<tr><td><b>Multi-layer design</b>Depth and dimension.</td><td><i>YES</i><br>Expertly layered.</td><td>NO<br>Flat and simple.</td></tr>
-<tr><td><b>Premium brass</b>Heavyweight feel.</td><td><i>YES</i><br>Top quality. Built to last.</td><td>NO<br>Light and weak.</td></tr>
-<tr><td><b>Custom finishes</b>Your finish, your way.</td><td><i>YES</i><br>Endless options.</td><td>LIMITED<br>Not truly custom.</td></tr>
-<tr><td><b>Fast turnaround</b>Built fast. On time.</td><td><i>YES</i><br>Industry-leading times.</td><td>SLOW<br>Long, unreliable waits.</td></tr></tbody></table>
+<div class="cmp-l"><div class="eyebrow" style="color:var(--gold)">Why we stand out</div><h2 class="h" style="margin-top:16px">Built different. <em>Built to win.</em></h2><p>Every detail matters — quality, speed and value, where others can’t compete.</p><div class="cmp-stats"><div><b>5/5</b><span>Features covered</span></div><div><b>0</b><span>Compromises</span></div></div><a class="btn gold" href="#">Start your design →</a></div>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Feature</th><th class="us"><small>Best choice</small>Championship Chains</th><th>Others</th></tr></thead><tbody>
+<tr><td><div class="f"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><div><b>Fully custom designs</b><small>Built around your vision.</small></div></div></td><td class="us"><div class="v y"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><em>YES</em><span>Dedicated design support.</span></div></div></td><td class="them"><div class="v n"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><em>NO</em><span>Limited support and options.</span></div></div></td></tr>
+<tr><td><div class="f"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 12l10 5 10-5M2 17l10 5 10-5"/></svg></span><div><b>Multi-layer design</b><small>Depth and dimension.</small></div></div></td><td class="us"><div class="v y"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><em>YES</em><span>Expertly layered.</span></div></div></td><td class="them"><div class="v n"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><em>NO</em><span>Flat and simple.</span></div></div></td></tr>
+<tr><td><div class="f"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg></span><div><b>Premium brass</b><small>Heavyweight feel.</small></div></div></td><td class="us"><div class="v y"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><em>YES</em><span>Top quality. Built to last.</span></div></div></td><td class="them"><div class="v n"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><em>NO</em><span>Light and weak.</span></div></div></td></tr>
+<tr><td><div class="f"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></span><div><b>Custom finishes</b><small>Your finish, your way.</small></div></div></td><td class="us"><div class="v y"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><em>YES</em><span>Endless options.</span></div></div></td><td class="them"><div class="v m"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg></span><div><em>LIMITED</em><span>Not truly custom.</span></div></div></td></tr>
+<tr><td><div class="f"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><b>Fast turnaround</b><small>Built fast. On time.</small></div></div></td><td class="us"><div class="v y"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><em>YES</em><span>Industry-leading times.</span></div></div></td><td class="them"><div class="v m"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg></span><div><em>SLOW</em><span>Long, unreliable waits.</span></div></div></td></tr>
+</tbody></table></div>
 </div></div></section>
 
 <section class="rev" id="reviews"><div class="wrap">
