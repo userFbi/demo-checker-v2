@@ -106,19 +106,6 @@ section{position:relative}
 .legacy{margin-top:46px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .legacy span{font-family:var(--d);font-style:italic;font-weight:900;font-size:clamp(26px,3vw,40px);text-transform:uppercase}
 /* process */
-.proc{background:var(--ink);color:var(--cream);padding:70px 0}
-.proc h2{font-size:clamp(38px,5vw,66px)}
-.proc h2 em{font-style:inherit;color:var(--gold)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:44px;position:relative}
-.steps:before{content:"";position:absolute;left:0;right:0;top:27px;height:3px;background:linear-gradient(90deg,var(--gold),#ffffff25)}
-.st{padding-right:22px;position:relative}
-.st i{width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:var(--d);font-weight:900;font-size:26px;font-style:normal;margin-bottom:18px;position:relative}
-.st h3{font-family:var(--d);font-size:23px;text-transform:uppercase;margin:0 0 6px;line-height:1.05}
-.st p{margin:0;font-size:15px;opacity:.75}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border:1px solid #ffffff30}
-.facts div{padding:24px;border-right:1px solid #ffffff30}.facts div:last-child{border:0}
-.facts b{font-family:var(--d);font-style:italic;font-weight:900;font-size:40px;color:var(--gold);display:block;line-height:1}
-.facts span{font-size:13px;text-transform:uppercase;letter-spacing:.12em;opacity:.75}
 /* categories */
 .cats{padding:70px 0 50px}
 .cats h2{font-size:clamp(38px,5vw,66px);margin-bottom:30px}
@@ -225,6 +212,52 @@ footer .soc{display:flex;gap:10px;margin-top:18px}
 footer .soc a{display:grid;place-items:center;width:42px;height:42px;border:1.5px solid #ffffff40;border-radius:50%;padding:0;opacity:1;color:var(--cream);transition:.2s}
 footer .soc a svg{width:19px;height:19px}
 footer .soc a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-3px)}
+
+/* video play v3 */
+.vid{display:block}
+.vid:before{content:none!important}
+.vid{cursor:pointer}
+.vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;z-index:2;box-shadow:0 0 0 8px rgba(224,174,44,.28),0 10px 30px rgba(0,0,0,.5);transition:transform .25s,box-shadow .25s}
+.vid .play svg{width:34px;height:34px;fill:currentColor;margin-left:4px}
+.vid:hover .play,.vid:focus-visible .play{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 0 0 12px rgba(224,174,44,.3),0 10px 30px rgba(0,0,0,.5)}
+.vid .vlabel{position:absolute;left:0;right:0;bottom:16px;text-align:center;z-index:2;font-family:var(--d);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--gold);text-shadow:0 2px 8px #000}
+.vid.playing{cursor:default}
+.vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000;z-index:3}
+/* faq smooth */
+.faq summary{user-select:none}
+.faq summary:after{transition:transform .3s,color .2s}
+.faq details[open] summary:after{transform:rotate(180deg)}
+.faq .fa{overflow:hidden}
+/* process v2 */
+.proc{background:var(--ink);color:var(--cream);padding:64px 0 68px;background-image:radial-gradient(circle at 85% 0,#E0AE2C14 0,#0000 45%)}
+.proc h2{font-size:clamp(34px,4.6vw,60px)}
+.proc h2 em{font-style:inherit;color:var(--gold)}
+.proc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.proc-head p{max-width:340px;margin:0;opacity:.75;font-size:17px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.st{position:relative;background:#171717;border:1px solid #ffffff1f;border-top:3px solid var(--gold);padding:24px 22px 26px;transition:transform .25s,background .25s,border-color .25s}
+.st:hover{transform:translateY(-5px);background:#1d1d1d;border-color:#E0AE2C66}
+.st-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.st i{width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:var(--d);font-weight:900;font-size:26px;font-style:normal;box-shadow:0 0 0 6px #E0AE2C22}
+.st h3{font-family:var(--d);font-size:23px;text-transform:uppercase;margin:0 0 8px;line-height:1.05;letter-spacing:.01em}
+.st p{margin:0;font-size:15px;opacity:.72;line-height:1.45}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.fact{display:flex;align-items:center;gap:16px;padding:22px 22px;border:1px solid #ffffff22;background:linear-gradient(180deg,#ffffff0a,#ffffff03)}
+.fact-ic{flex:none;width:50px;height:50px;display:grid;place-items:center;border:1.5px solid var(--gold);color:var(--gold)}
+.fact-ic svg{width:24px;height:24px}
+.fact b{font-family:var(--d);font-style:italic;font-weight:900;font-size:clamp(28px,2.6vw,36px);color:var(--gold);display:block;line-height:1}
+.fact span:not(.fact-ic){display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.72;margin-top:6px;line-height:1.35}
+.proc-cta{margin-top:32px;background:var(--gold);color:var(--ink);padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.proc-cta b{display:block;font-family:var(--d);font-style:italic;font-weight:900;text-transform:uppercase;font-size:clamp(26px,3vw,38px);line-height:1}
+.proc-cta span{font-size:17px}
+.proc-btns{display:flex;gap:14px;flex-wrap:wrap}
+.proc-cta .btn.gold{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.proc-cta .btn.gold:hover{background:transparent;color:var(--ink)}
+.proc-cta .btn.line.l{color:var(--ink);border-color:var(--ink)}
+.proc-cta .btn.line.l:hover{background:var(--ink);color:var(--gold)}
+@media(max-width:1180px){.steps{grid-template-columns:repeat(3,1fr)}.facts{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.steps{grid-template-columns:1fr;gap:16px}.st{display:grid;grid-template-columns:52px 1fr;gap:0 18px;padding:20px}.st-top{grid-row:span 2;margin:0}.st h3{margin-top:2px}}
+@media(max-width:560px){.proc{padding:50px 0}.facts{grid-template-columns:1fr}.proc-cta{padding:22px 20px}.proc-btns{width:100%}.proc-btns .btn{width:100%}}
 /* faq */
 .faq{padding:70px 0}
 .faq-g{display:grid;grid-template-columns:.8fr 1.4fr;gap:60px}
@@ -263,16 +296,13 @@ footer{background:#080808;color:var(--cream);padding:60px 0 24px}
 .stage{order:-1;max-width:460px;margin:0 auto;width:100%}
 .c1,.c2,.c3,.c4{grid-column:span 12;margin-top:0}
 .cimg{position:static;display:block;margin:18px 0 0;width:min(240px,70%)}.cell p{max-width:none}
-.steps{grid-template-columns:1fr;gap:34px}.steps:before{left:27px;right:auto;top:0;bottom:0;width:3px;height:auto;background:var(--gold)}
-.st{display:grid;grid-template-columns:56px 1fr;gap:0 18px;padding:0}.st i{grid-row:span 2;margin:0}
-.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid #ffffff30}
 .crow{grid-template-columns:1fr 48px}.crow em,.crow span,.crow img{display:none}
 .tbl{display:block;overflow-x:auto}
 .fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}
 .pc:nth-child(even){margin-top:0}
 .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px}.pc{flex:0 0 min(72vw,300px)}
 }
-@media(max-width:560px){body{font-size:16px}.feat,.craft,.proc,.cats,.faq,.rev,.cotm{padding:50px 0}.cta{padding:60px 0}.feat-foot{text-align:left}.btn{width:100%;justify-content:center}.pc .btn{width:auto}.cell h3{margin-top:70px}.cell svg{width:110px}}
+@media(max-width:560px){body{font-size:16px}.feat,.craft,.cats,.faq,.rev,.cotm{padding:50px 0}.cta{padding:60px 0}.feat-foot{text-align:left}.btn{width:100%;justify-content:center}.pc .btn{width:auto}.cell h3{margin-top:70px}.cell svg{width:110px}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="ch" viewBox="0 0 200 270">
@@ -408,16 +438,16 @@ header.site-header{grid-template-columns:auto 1fr auto}
 </div></section>
 
 <section class="proc" id="custom"><div class="wrap">
-<div class="eyebrow" style="color:var(--gold)">How it works</div>
-<h2 class="h" style="margin-top:16px">Simple process.<br><em>Premium results.</em></h2>
-<div class="steps">
-<div class="st"><i>1</i><h3>Share your idea</h3><p>Tell us your vision, event details and preferences.</p></div>
-<div class="st"><i>2</i><h3>Custom design support</h3><p>Work with our team to develop your unique design.</p></div>
-<div class="st"><i>3</i><h3>Approve design</h3><p>Review your design and request any changes.</p></div>
-<div class="st"><i>4</i><h3>Production begins</h3><p>Once approved, expert craftsmanship begins.</p></div>
-<div class="st"><i>5</i><h3>Delivered to you</h3><p>Carefully packed and shipped.</p></div></div>
-<div class="facts"><div><b>5–7 days</b><span>Stock chains · business days</span></div><div><b>3–4 wks</b><span>Fully custom premier, after approval</span></div><div><b>$450–$1,300</b><span>Fully custom premier range</span></div><div><b>$16.99+</b><span>UPS ground, insured (example)</span></div></div>
-<div style="margin-top:44px;display:flex;gap:16px;flex-wrap:wrap"><a class="btn gold" href="#">Design your chain →</a><a class="btn line l" href="#">Request a quote</a></div>
+<div class="proc-head">
+  <div><div class="eyebrow" style="color:var(--gold)">How it works</div><h2 class="h" style="margin-top:16px">Simple process.<br><em>Premium results.</em></h2></div>
+  <p>From first idea to your doorstep — five clear steps, with our design team beside you the whole way.</p>
+</div>
+<div class="steps"><div class="st"><div class="st-top"><i>1</i></div><h3>Share your idea</h3><p>Tell us your vision, event details and preferences.</p></div><div class="st"><div class="st-top"><i>2</i></div><h3>Custom design support</h3><p>Work with our team to develop your unique design.</p></div><div class="st"><div class="st-top"><i>3</i></div><h3>Approve design</h3><p>Review your design and request any changes.</p></div><div class="st"><div class="st-top"><i>4</i></div><h3>Production begins</h3><p>Once approved, expert craftsmanship begins.</p></div><div class="st"><div class="st-top"><i>5</i></div><h3>Delivered to you</h3><p>Carefully packed and shipped.</p></div></div>
+<div class="facts"><div class="fact"><span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>5–7 days</b><span>Stock chains · business days</span></div></div><div class="fact"><span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><b>3–4 wks</b><span>Fully custom premier, after approval</span></div></div><div class="fact"><span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span><div><b>$450–$1,300</b><span>Fully custom premier range</span></div></div><div class="fact"><span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></span><div><b>$16.99+</b><span>UPS ground, insured (example)</span></div></div></div>
+<div class="proc-cta">
+  <div><b>Have an idea?</b><span>Let’s turn it into a championship chain.</span></div>
+  <div class="proc-btns"><a class="btn gold" href="#">Design your chain →</a><a class="btn line l" href="#">Request a quote</a></div>
+</div>
 </div></section>
 
 <section class="cats" id="categories"><div class="wrap">
@@ -447,7 +477,7 @@ header.site-header{grid-template-columns:auto 1fr auto}
 </div>
 <div class="rev-g">
   <div class="rev-main">
-    <div class="vid"><img class="vimg" src="https://championshipchains.com/cdn/shop/files/sddefault.webp?v=1785932730&amp;width=1200" alt="Customer testimonial video" loading="lazy" onerror="this.remove()"><span>Watch customer video</span></div>
+    <div class="vid" id="revVideo" role="button" tabindex="0" aria-label="Play customer video" data-yt="MLtNF0bQQtg" data-mp4=""><img class="vimg" src="https://championshipchains.com/cdn/shop/files/sddefault.webp?v=1785932730&amp;width=1200" alt="Customer testimonial video" loading="lazy" onerror="this.remove()"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel">Watch customer video</span></div>
     <div class="rev-quote">
       <div class="stars">★★★★★</div>
       <p class="q"><span>“</span>Exceeded our expectations.<span>”</span></p>
@@ -490,4 +520,52 @@ header.site-header{grid-template-columns:auto 1fr auto}
 </div>
 <div class="fb"><span>Secure checkout guaranteed</span><span>© 2025 Championship Chains. All rights reserved.</span></div>
 </div></footer>
+<script>
+(function(){
+  // Video: click to play inside the same box
+  var v=document.getElementById('revVideo');
+  if(v){
+    var play=function(){
+      if(v.classList.contains('playing'))return;
+      var yt=(v.dataset.yt||'').trim(), mp4=(v.dataset.mp4||'').trim(), el;
+      if(mp4){el=document.createElement('video');el.src=mp4;el.controls=true;el.autoplay=true;el.playsInline=true;}
+      else if(yt&&yt!=='YOUR_YOUTUBE_ID'){el=document.createElement('iframe');el.src='https://www.youtube.com/embed/'+encodeURIComponent(yt)+'?autoplay=1&rel=0&modestbranding=1';el.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';el.allowFullscreen=true;el.title='Customer testimonial video';}
+      else{return;}
+      v.classList.add('playing');v.appendChild(el);
+      [].forEach.call(v.querySelectorAll('.play,.vlabel,.vimg'),function(n){n.style.display='none'});
+    };
+    v.addEventListener('click',play);
+    v.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});
+  }
+  // FAQ: one open at a time, smooth
+  var items=[].slice.call(document.querySelectorAll('.faq details'));
+  var D=380, E='cubic-bezier(.4,0,.2,1)';
+  items.forEach(function(d){
+    var p=d.querySelector('p'), w=document.createElement('div');
+    w.className='fa';p.parentNode.insertBefore(w,p);w.appendChild(p);d._w=w;
+    d.querySelector('summary').addEventListener('click',function(e){
+      e.preventDefault();
+      if(d.open&&!d._closing){close(d);}
+      else{items.forEach(function(o){if(o!==d&&o.open)close(o);});open(d);}
+    });
+  });
+  function run(d,from,to,done){
+    if(d._a)d._a.cancel();
+    var w=d._w;w.style.overflow='hidden';
+    d._a=w.animate([{height:from+'px',opacity:from?1:0},{height:to+'px',opacity:to?1:0}],{duration:D,easing:E});
+    d._a.onfinish=function(){d._a=null;w.style.overflow='';done&&done();};
+    d._a.oncancel=function(){w.style.overflow='';};
+  }
+  function open(d){
+    d._closing=false;
+    var cur=d.open?d._w.getBoundingClientRect().height:0;
+    d.open=true;
+    run(d,cur,d._w.scrollHeight);
+  }
+  function close(d){
+    d._closing=true;
+    run(d,d._w.getBoundingClientRect().height,0,function(){d.open=false;d._closing=false;});
+  }
+})();
+</script>
 </body></html>
