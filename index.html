@@ -191,6 +191,40 @@ section{position:relative}
 .kimg{position:absolute;inset:0;margin:auto;width:84%;height:auto;max-height:96%;object-fit:contain;filter:drop-shadow(0 24px 24px #0008)}
 .cimg{position:absolute;right:20px;bottom:20px;width:clamp(120px,13vw,180px);height:auto}
 .crow img{width:110px;height:68px;object-fit:cover;background:var(--cream2);border:2px solid var(--ink)}
+/* reviews v2 – compact */
+.rev{padding:52px 0 56px}
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+.rev-head h2{font-size:clamp(32px,4vw,52px);margin:12px 0 0}
+.rev-score{display:flex;align-items:center;gap:16px;border:2px solid var(--ink);background:#F9F2E3;padding:12px 20px}
+.rev-score b{font-family:var(--d);font-style:italic;font-weight:900;font-size:48px;line-height:.9}
+.rev-score .stars{font-size:18px;letter-spacing:3px}
+.rev-score span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.rev-g{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:stretch}
+.rev-main{display:grid;grid-template-columns:1fr;border:2px solid var(--ink);background:#F9F2E3}
+.rev-main .vid{margin:0;aspect-ratio:16/8;border-bottom:2px solid var(--ink)}
+.rev-quote{padding:22px 26px 26px}
+.rev .q{font-size:clamp(26px,3vw,40px);margin:8px 0 10px}
+.rev .qt{font-size:17px;margin:0;max-width:520px}
+.rev .stars{font-size:18px}
+.rev .who{margin-top:14px;font-size:15px}
+.rev-side{display:flex;flex-direction:column;gap:16px}
+.rev .mini{margin:0;flex:1;border:2px solid var(--ink);border-left:6px solid var(--gold);background:#F9F2E3;padding:16px 20px;display:flex;flex-direction:column;justify-content:center}
+.rev .mini h4{font-size:24px}
+.rev .mini .who{margin-top:8px;font-size:14px}
+.rev-cta{background:var(--ink);color:var(--cream);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.rev-cta span{font-family:var(--d);font-style:italic;font-weight:900;text-transform:uppercase;font-size:22px;line-height:1;color:var(--gold)}
+.rev-cta .btn{padding:11px 18px;font-size:16px}
+@media(max-width:980px){.rev-g{grid-template-columns:1fr}.rev-main .vid{aspect-ratio:16/9}}
+@media(max-width:560px){.rev-cta .btn{width:100%}.rev-score{width:100%}}
+/* footer v2 */
+.f-logo{display:inline-block;margin-bottom:6px;text-decoration:none;opacity:1!important}
+.f-logo img{height:54px;width:auto;max-width:240px;object-fit:contain}
+.f-logo span{font-family:var(--d);font-style:italic;font-weight:900;text-transform:uppercase;font-size:32px;line-height:.9;color:var(--cream)}
+.f-logo span em{font-style:inherit;color:var(--gold)}
+footer .soc{display:flex;gap:10px;margin-top:18px}
+footer .soc a{display:grid;place-items:center;width:42px;height:42px;border:1.5px solid #ffffff40;border-radius:50%;padding:0;opacity:1;color:var(--cream);transition:.2s}
+footer .soc a svg{width:19px;height:19px}
+footer .soc a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-3px)}
 /* faq */
 .faq{padding:70px 0}
 .faq-g{display:grid;grid-template-columns:.8fr 1.4fr;gap:60px}
@@ -407,13 +441,25 @@ header.site-header{grid-template-columns:auto 1fr auto}
 </div></div></section>
 
 <section class="rev" id="reviews"><div class="wrap">
-<div class="eyebrow">Trusted by champions</div><h2 class="h">Real feedback.<br>Real champions.</h2>
+<div class="rev-head">
+  <div><div class="eyebrow">Trusted by champions</div><h2 class="h">Real feedback.<br>Real champions.</h2></div>
+  <div class="rev-score"><b>4.5</b><div><div class="stars">★★★★★</div><span>Rated by verified buyers</span></div></div>
+</div>
 <div class="rev-g">
-<div><div class="stars">★★★★★</div><p class="q"><span>“</span>Exceeded our expectations.<span>”</span></p><p style="max-width:520px;font-size:19px;margin:0">The quality, detail, and weight of the chain were unreal. It truly made our championship unforgettable.</p><div class="who">Coach Marcus T.<small>National Champions · Verified buyer</small></div>
-<div class="vid"><img class="vimg" src="https://championshipchains.com/cdn/shop/files/sddefault.webp?v=1785932730&amp;width=1200" alt="Customer testimonial video" loading="lazy" onerror="this.remove()"><span>Watch customer video</span></div></div>
-<div><div class="mini"><h4>Looked even better than the render.</h4><p>The final product blew us away. The details and finish were on another level.</p><div class="who" style="margin:0;font-size:15px">Ryan K. <small>High School Athletics Director · Verified buyer</small></div></div>
-<div class="mini"><h4>Our players loved them.</h4><p>The chains were the highlight of the season. Everyone wanted to wear them!</p><div class="who" style="margin:0;font-size:15px">Jordan M. <small>Team Captain · Verified buyer</small></div></div>
-<a class="ul" href="#">Read all reviews →</a></div>
+  <div class="rev-main">
+    <div class="vid"><img class="vimg" src="https://championshipchains.com/cdn/shop/files/sddefault.webp?v=1785932730&amp;width=1200" alt="Customer testimonial video" loading="lazy" onerror="this.remove()"><span>Watch customer video</span></div>
+    <div class="rev-quote">
+      <div class="stars">★★★★★</div>
+      <p class="q"><span>“</span>Exceeded our expectations.<span>”</span></p>
+      <p class="qt">The quality, detail, and weight of the chain were unreal. It truly made our championship unforgettable.</p>
+      <div class="who">Coach Marcus T.<small>National Champions · Verified buyer</small></div>
+    </div>
+  </div>
+  <div class="rev-side">
+    <div class="mini"><div class="stars">★★★★★</div><h4>Looked even better than the render.</h4><p>The final product blew us away. The details and finish were on another level.</p><div class="who">Ryan K. <small>High School Athletics Director · Verified buyer</small></div></div>
+    <div class="mini"><div class="stars">★★★★★</div><h4>Our players loved them.</h4><p>The chains were the highlight of the season. Everyone wanted to wear them!</p><div class="who">Jordan M. <small>Team Captain · Verified buyer</small></div></div>
+    <div class="rev-cta"><span>Join thousands of champions</span><a class="btn gold" href="#">Read all reviews →</a></div>
+  </div>
 </div></div></section>
 
 <section class="faq" id="faq"><div class="wrap faq-g">
@@ -436,8 +482,8 @@ header.site-header{grid-template-columns:auto 1fr auto}
 
 <footer><div class="wrap">
 <div class="fg">
-<div><div class="logo">Championship<br><span>Chains</span></div><p>Premium championship chains. Custom built. Legendary forever.</p><p>419-329-4713<br>championshipchains@gmail.com<br>Ohio, USA</p>
-<div class="soc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">X</a></div></div>
+<div><a href="https://championshipchains.com/" class="f-logo" aria-label="Championship Chains"><img src="https://championshipchains.com/cdn/shop/files/logo_1.png?v=1781871265&amp;width=300" alt="Championship Chains logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span style="display:none">Championship <em>Chains</em></span></a><p>Premium championship chains. Custom built. Legendary forever.</p><p>419-329-4713<br>championshipchains@gmail.com<br>Ohio, USA</p>
+<div class="soc"><a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a><a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a><a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="#" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a><a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11a3.5 3.5 0 1 1-3.5-3.5M14 3c.4 2.6 2 4.2 5 4.4"/></svg></a></div></div>
 <div><h5>Shop</h5><a href="#">Stock Chains</a><a href="#">Custom Chains</a><a href="#">Chain of the Month</a><a href="#">New Releases</a></div>
 <div><h5>Company</h5><a href="#">About Us</a><a href="#">Customer Gallery</a><a href="#">Blog</a><a href="#">Reviews</a></div>
 <div><h5>Support</h5><a href="#">Contact Us</a><a href="#">Artwork Guidelines</a><a href="#">Customer Service</a><a href="#">Ordering Process</a></div>
